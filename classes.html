@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases - Gimnasio Rafa Del Toro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <!-- Navigation (same as home.html) -->
+    <!-- Navigation content -->
+    <nav class="bg-red-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="home.html" class="flex items-center">
+                        <img src="images/logo.png" alt="Rafa Del Toro Gym Logo" class="h-12 w-auto">
+                        <span class="font-bold text-xl ml-2">Rafa Del Toro Gym</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="home.html" class="hover:bg-red-500 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="classes.html" class="hover:bg-red-500 px-3 py-2 rounded-md text-sm font-medium">Clases</a>
+                        <a href="trainers.html" class="hover:bg-red-500 px-3 py-2 rounded-md text-sm font-medium">Entrenadores</a>
+                        <a href="precios.html" class="hover:bg-red-500 px-3 py-2 rounded-md text-sm font-medium">Precios</a>
+                        <a href="contacto.html" class="hover:bg-red-500 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-red-500 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, hidden by default -->
+        <div id="menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="home.html" class="block hover:bg-red-500 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                <a href="classes.html" class="block hover:bg-red-500 px-3 py-2 rounded-md text-sm font-medium">Clases</a>
+                <a href="trainers.html" class="block hover:bg-red-500 px-3 py-2 rounded-md text-sm font-medium">Entrenadores</a>
+                <a href="precios.html" class="block hover:bg-red-500 px-3 py-2 rounded-md text-sm font-medium">Precios</a>
+                <a href="contacto.html" class="block hover:bg-red-500 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav> 
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    
+
+    <!-- Hero Section for Classes -->
+    <div class="relative bg-gray-900 overflow-hidden">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-75" src="clases-background.jpg" alt="Clases de kickboxing">
+        <div class="relative z-10 bg-gray-900 bg-opacity-75">
+            <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                        <span class="block">Nuestras Clases</span>
+                        <span class="block text-red-600">Para Todos los Niveles</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Classes Grid -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Kickboxing Básico -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                    <img class="h-48 w-full object-cover" src="images/niño.jpg" alt="Kickboxing Básico">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Kickboxing Básico</h3>
+                        <p class="mt-2 text-gray-600">Clase perfecta para principiantes. Aprende las técnicas fundamentales y mejora tu condición física.</p>
+                        <div class="mt-4">
+                            <span class="text-red-600 font-semibold">Lunes y Miércoles</span>
+                            <span class="block text-gray-500">9:00 AM - 10:30 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kickboxing Avanzado -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                    <img class="h-48 w-full object-cover" src="images/grupo playa.jpg" alt="Kickboxing Avanzado">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Kickboxing Avanzado</h3>
+                        <p class="mt-2 text-gray-600">Para practicantes experimentados. Técnicas avanzadas y entrenamiento intensivo.</p>
+                        <div class="mt-4">
+                            <span class="text-red-600 font-semibold">Martes y Jueves</span>
+                            <span class="block text-gray-500">18:00 PM - 19:30 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Defensa Personal -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                    <img class="h-48 w-full object-cover" src="images/bjj.jpg" alt="Defensa Personal">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Defensa Personal</h3>
+                        <p class="mt-2 text-gray-600">Aprende técnicas efectivas de autodefensa en un ambiente seguro y controlado.</p>
+                        <div class="mt-4">
+                            <span class="text-red-600 font-semibold">Viernes</span>
+                            <span class="block text-gray-500">17:00 PM - 18:30 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-red-600">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                    <span class="block">¿Listo para empezar?</span>
+                    <span class="block text-red-200">Reserva tu clase de prueba gratuita</span>
+                </h2>
+                <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                    <div class="inline-flex rounded-md shadow">
+                        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-red-50">
+                            Reservar Ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (same as home.html) -->
+    <footer class="bg-gray-800">
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
